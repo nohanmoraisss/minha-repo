@@ -2,55 +2,121 @@
 <html lang="pt-br">
 <head>
     <style>
-        header{text-align: center;
-        padding: 20px;}
-        
-        section#comedia {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;     
-}
-footer{text-align: center;}
+    body {
+        background-color: #000000;
+        color: #ffffff;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
 
-        nav ul {
-    display: flex;
-    justify-content: center;
-    gap: 20px;         
-    list-style: none;
-    padding: 0;
-}
+    header {
+        text-align: center;
+        padding: 20px; 
+        background-color: #F5D03D;
+        color: rgb(176, 77, 11);
+        max-width: 800px;
+        margin: 0 auto;
+        border-style: outset; border-color: rgb(159, 104, 0); border-radius: 25px;
+    }
+    
+    footer {
+        text-align: center;
+        padding: 20px;
+        color: #888888;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        gap: 20px;         
+        list-style: none;
+        padding: 0;
+    }
+
+    nav a {
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    nav a:hover {
+        color: #ffffff;
+    }
+
+    main {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .filmes-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .filme-card {
+        background-color: #1c1c1c;
+        padding: 15px;
+        border-radius: 2px;
+        text-align: center;
+        border: 1px solid #333;
+
+    }
+
+    .titulo {
+        color: #ffffff;
+        font-size: 40px;
+        text-decoration: none;
+        font-weight: bold;
+    
+    }
     </style>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>GitFlix</title>
 </head>
 <body>
     <header>
-        <h1>GitFlix</h1>
-        <p>Melhor do que nunca!</p>
+        <h1 class="titulo">GitFlix</h1>
+        <p>Filmes e Séries!</p>
     </header>
 
-<main>
-    <section>
+    <main>
         <nav>
-  <ul>
-    <li><a href="#filmes">Filmes</a></li>
-    <li><a href="#series">Séries</a></li>
-    <li><a href="#drama">Drama</a></li>
-    <li><a href="#comedia" onclick="tocarComedia(); return false;">Comédia</a></li>
-    <li><a href="#romance">Romance</a></li>
-  </ul>
-</nav>
-    </section>
-    <section id="comedia">
-  <h2>Filmes de Comédia</h2>
-  <video id="tocarComedia" width="100%" controls>
-    <source src="https://store-na-phx-3.gofile.io/download/web/6ed2afd0-2116-4b82-8c8a-1af4817e966d/9J8gnvAxmDFbG.mp4" type="video/mp4">
-    Seu navegador não suporta vídeos.
-  </video>
-</section>
-</main>
+            <ul>
+                <li><a href="#filmes">Filmes</a></li>
+                <li><a href="#series">Séries</a></li>
+                <li><a href="#drama">Drama</a></li>
+                <li><a href="#comedia">Comedia</a></li>
+                <li><a href="#romance">Romance</a></li>
+            </ul>
+        </nav>
+
+        <section id="filmes">
+            <h2>Filmes em Destaque</h2>
+            
+            <div class="filmes-container">
+                <div class="filme-card">
+                    <h3>Filme 1</h3>
+                    <p>Ano: 2026</p>
+                </div>
+
+                <div class="filme-card">
+                    <h3>Filme 2</h3>
+                    <p>Ano: 2026</p>
+                </div>
+
+                <div class="filme-card">
+                    <h3>Filme 3</h3>
+                    <p>Ano: 2026</p>
+                </div>
+            </div>
+        </section>
+    </main>
     
-    <footer>Marcolinlil</footer>
+    <footer>nohan e pedro</footer>
 </body>
 </html>
