@@ -3,7 +3,8 @@
 <head>
     <style>
     body {
-        background-color: #000000;
+        background-image: url(https://i.pinimg.com/originals/38/f2/a8/38f2a8db0f5375b7be47edeec1a8d7d4.jpg);
+        background-size: cover;
         color: #ffffff;
         font-family: Arial, sans-serif;
         margin: 0;
@@ -26,27 +27,48 @@
         color: #888888;
     }
 
+    main {
+        max-width: 1200px; 
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .layout-container {
+        display: flex;
+        gap: 30px;
+        margin-top: 20px;
+    }
+
+    nav {
+        width: 200px;
+        flex-shrink: 0;
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 20px;
+        border-radius: 8px;
+        height: fit-content;
+    }
+
     nav ul {
         display: flex;
-        justify-content: center;
-        gap: 20px;         
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;         
         list-style: none;
         padding: 0;
     }
 
     nav a {
-        color: #ffffff;
+        color: #F5D03D;
         text-decoration: none;
         font-weight: bold;
+        font-size: 18px;
     }
     nav a:hover {
         color: #ffffff;
     }
 
-    main {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 20px;
+    section#filmes {
+        flex: 1;
     }
 
     .filmes-container {
@@ -59,10 +81,18 @@
     .filme-card {
         background-color: #1c1c1c;
         padding: 15px;
-        border-radius: 2px;
+        border-radius: 8px;
         text-align: center;
         border: 1px solid #333;
+        
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
+    .filme-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
     }
 
     .titulo {
@@ -70,7 +100,6 @@
         font-size: 40px;
         text-decoration: none;
         font-weight: bold;
-    
     }
     </style>
     
@@ -85,45 +114,47 @@
     </header>
 
     <main>
-        <nav>
-            <ul>
-                <li><a href="#filmes">Filmes</a></li>
-                <li><a href="#series">Séries</a></li>
-                <li><a href="#drama">Drama</a></li>
-                <li><a href="#comedia">Comedia</a></li>
-                <li><a href="#romance">Romance</a></li>
-            </ul>
-        </nav>
+        <div class="layout-container">
+            <nav>
+                <ul>
+                    <li><a href="#filmes">Filmes</a></li>
+                    <li><a href="#series">Séries</a></li>
+                    <li><a href="#drama">Drama</a></li>
+                    <li><a href="#comedia">Comedia</a></li>
+                    <li><a href="#romance">Romance</a></li>
+                </ul>
+            </nav>
 
-        <section id="filmes">
-            <h2>Filmes em Destaque</h2>
-            
-            <div class="filmes-container">
-                <div class="filme-card">
-                    <h2>YAGO</h2>
-                    <h3>Categoria: Suspence</h3>
-                    <p>Ano: 2025</p>
-                </div>
+            <section id="filmes">
+                <h2>Filmes em Destaque</h2>
                 
-                <div class="filme-card">
-                    <h2>Vale Almoço</h2>
-                    <h3>Categoria: Comédia</h3>
-                    <p>Ano: 2025</p>
-                </div>
+                <div class="filmes-container">
+                    <div class="filme-card">
+                        <h2>YAGO</h2>
+                        <p>Categoria: Suspence</p>
+                        <p>Ano: 2025</p>
+                    </div>
+                    
+                    <div class="filme-card">
+                        <h2>Vale Almoço</h2>
+                        <p>Categoria: Comédia</p>
+                        <p>Ano: 2025</p>
+                    </div>
 
-                <div class="filme-card">
-                    <h2>Virou Bagunça</h2>
-                    <h3>Categoria: Comédia</h3>
-                    <p>Ano: 2025</p>
-                </div>
+                    <div class="filme-card">
+                        <h2>Virou Bagunça</h2>
+                        <p>Categoria: Comédia</p>
+                        <p>Ano: 2025</p>
+                    </div>
 
-                <div class="filme-card">
-                    <h2>O dia que a terra ficou bagunçada</h2>
-                    <h3>Categoria: Comédia</h3>
-                    <p>Ano: 2025</p>
+                    <div class="filme-card">
+                        <h2>O dia que a terra ficou bagunçada</h2>
+                        <p>Categoria: Comédia</p>
+                        <p>Ano: 2025</p>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
     </main>
     
     <footer>nohan e pedro</footer>
