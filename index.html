@@ -73,26 +73,45 @@
 
     .filmes-container {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
         gap: 20px;
         margin-top: 20px;
     }
 
     .filme-card {
         background-color: #1c1c1c;
-        padding: 15px;
+        padding: 10px;
         border-radius: 8px;
         text-align: center;
         border: 1px solid #333;
-        
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-        
         transition: transform 0.3s ease, box-shadow 0.3s ease;
+        overflow: hidden;
     }
 
     .filme-card:hover {
         transform: translateY(-5px);
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+    }
+
+    .filme-card img {
+        width: 100%;
+        height: 260px;
+        object-fit: cover;
+        border-radius: 6px;
+        display: block;
+    }
+
+    .filme-card h2 {
+        font-size: 15px;
+        margin: 10px 5px 5px;
+        color: #F5D03D;
+    }
+
+    .filme-card p {
+        font-size: 13px;
+        margin: 3px 5px;
+        color: #aaaaaa;
     }
 
     .titulo {
@@ -130,24 +149,28 @@
                 
                 <div class="filmes-container">
                     <div class="filme-card">
+                        <img src="https://picsum.photos/seed/yago-suspense/300/450" alt="YAGO">
                         <h2>YAGO</h2>
-                        <p>Categoria: Suspence</p>
+                        <p>Categoria: Suspense</p>
                         <p>Ano: 2025</p>
                     </div>
                     
                     <div class="filme-card">
+                        <img src="https://picsum.photos/seed/vale-almoco-comedia/300/450" alt="Vale Almoço">
                         <h2>Vale Almoço</h2>
                         <p>Categoria: Comédia</p>
                         <p>Ano: 2025</p>
                     </div>
 
                     <div class="filme-card">
+                        <img src="https://raw.githubusercontent.com/nohanmoraisss/minha-repo/refs/heads/main/virou.png" alt="Virou Bagunça">
                         <h2>Virou Bagunça</h2>
                         <p>Categoria: Comédia</p>
                         <p>Ano: 2025</p>
                     </div>
 
                     <div class="filme-card">
+                        <img src="https://picsum.photos/seed/terra-baguncada/300/450" alt="O dia que a terra ficou bagunçada">
                         <h2>O dia que a terra ficou bagunçada</h2>
                         <p>Categoria: Comédia</p>
                         <p>Ano: 2025</p>
