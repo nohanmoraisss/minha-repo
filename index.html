@@ -198,6 +198,8 @@
         border-radius: 5px;
         cursor: pointer;
         transition: background 0.3s;
+        text-decoration: none; /* Removido sublinhado do link */
+        display: inline-block; /* Para pegar o padding corretamente */
     }
 
     .btn-assistir:hover {
@@ -290,7 +292,7 @@
                     <span id="modal-categoria"></span> | <span id="modal-ano"></span>
                 </div>
                 <p class="sinopse" id="modal-sinopse"></p>
-                <button class="btn-assistir">▶ Assistir Agora</button>
+                <a href="#" id="btn-assistir" class="btn-assistir" target="_blank">▶ Assistir Agora</a>
             </div>
         </div>
     </div>
@@ -304,28 +306,32 @@
                 img: 'https://picsum.photos/seed/yago-suspense/300/450',
                 categoria: 'Suspense',
                 ano: '2025',
-                sinopse: 'Um thriller eletrizante sobre Yago, um homem que descobre segredos sombrios em sua própria cidade. A cada passo, a verdade se torna mais perigosa e a paranoia toma conta.'
+                sinopse: 'Um thriller eletrizante sobre Yago, um homem que descobre segredos sombrios em sua própria cidade. A cada passo, a verdade se torna mais perigosa e a paranoia toma conta.',
+                link: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
             },
             'vale-almoco': {
                 titulo: 'Vale Almoço',
                 img: 'https://picsum.photos/seed/vale-almoco-comedia/300/450',
                 categoria: 'Comédia',
                 ano: '2025',
-                sinopse: 'A confusão começa quando funcionários de uma empresa decidem fazer um almoço que sai totalmente do controle. Uma comédia cheia de situações inusitadas e personagens excêntricos.'
+                sinopse: 'A confusão começa quando funcionários de uma empresa decidem fazer um almoço que sai totalmente do controle. Uma comédia cheia de situações inusitadas e personagens excêntricos.',
+                link: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
             },
             'virou-bagunca': {
                 titulo: 'Virou Bagunça',
                 img: 'https://raw.githubusercontent.com/nohanmoraisss/minha-repo/refs/heads/main/virou.png',
                 categoria: 'Comédia',
                 ano: '2025',
-                sinopse: 'Quando um evento simples vira o caos, um grupo de amigos precisa se unir para consertar a bagunça antes que seja tarde demais. Muitas risadas e confusões garantidas!'
+                sinopse: 'Quando um evento simples vira o caos, um grupo de amigos precisa se unir para consertar a bagunça antes que seja tarde demais. Muitas risadas e confusões garantidas!',
+                link: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
             },
             'terra-baguncada': {
                 titulo: 'O dia que a terra ficou bagunçada',
                 img: 'https://picsum.photos/seed/terra-baguncada/300/450',
                 categoria: 'Comédia',
                 ano: '2025',
-                sinopse: 'Uma comédia sci-fi onde um evento alienígena inesperado transforma a Terra em um verdadeiro caos cômico. A humanidade nunca riu tanto em meio ao desespero.'
+                sinopse: 'Uma comédia sci-fi onde um evento alienígena inesperado transforma a Terra em um verdadeiro caos cômico. A humanidade nunca riu tanto em meio ao desespero.',
+                link: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
             }
         };
 
@@ -339,6 +345,8 @@
                 document.getElementById('modal-categoria').innerText = 'Categoria: ' + filme.categoria;
                 document.getElementById('modal-ano').innerText = 'Ano: ' + filme.ano;
                 document.getElementById('modal-sinopse').innerText = filme.sinopse;
+                
+                document.getElementById('btn-assistir').href = filme.link;
                 
                 document.getElementById('modal-filme').style.display = 'flex';
             }
