@@ -198,8 +198,8 @@
         border-radius: 5px;
         cursor: pointer;
         transition: background 0.3s;
-        text-decoration: none; /* Removido sublinhado do link */
-        display: inline-block; /* Para pegar o padding corretamente */
+        text-decoration: none;
+        display: inline-block;
     }
 
     .btn-assistir:hover {
@@ -251,28 +251,28 @@
                 
                 <div class="filmes-container">
                     <div class="filme-card" onclick="abrirFilme('yago')">
-                        <img src="/capa3.jpg" alt="YAGO">
+                        <img src="images/capa3.jpg" alt="YAGO">
                         <h2>YAGO</h2>
                         <p>Categoria: Suspense</p>
                         <p>Ano: 2025</p>
                     </div>
                     
                     <div class="filme-card" onclick="abrirFilme('vale-almoco')">
-                        <img src="/capa1.png" alt="Vale Almoço">
+                        <img src="images/capa1.jpg" alt="Vale Almoço">
                         <h2>Vale Almoço</h2>
                         <p>Categoria: Comédia</p>
                         <p>Ano: 2025</p>
                     </div>
 
                     <div class="filme-card" onclick="abrirFilme('virou-bagunca')">
-                        <img src="/virou.png" alt="Virou Bagunça">
+                        <img src="images/virou.png" alt="Virou Bagunça">
                         <h2>Virou Bagunça</h2>
                         <p>Categoria: Comédia</p>
                         <p>Ano: 2025</p>
                     </div>
 
                     <div class="filme-card" onclick="abrirFilme('terra-baguncada')">
-                        <img src="/capa2.png" alt="bagunça"
+                        <img src="images/capa2.jpg" alt="bagunça"
                         <h2>O dia que a terra ficou bagunçada</h2>
                         <p>Categoria: Comédia</p>
                         <p>Ano: 2025</p>
@@ -303,7 +303,7 @@
         const filmes = {
             'yago': {
                 titulo: 'YAGO',
-                img: 'https://picsum.photos/seed/yago-suspense/300/450',
+                img: 'images/capa1.jpg',
                 categoria: 'Suspense',
                 ano: '2025',
                 sinopse: 'Um thriller eletrizante sobre Yago, um homem que descobre segredos sombrios em sua própria cidade. A cada passo, a verdade se torna mais perigosa e a paranoia toma conta.',
@@ -311,7 +311,7 @@
             },
             'vale-almoco': {
                 titulo: 'Vale Almoço',
-                img: 'https://picsum.photos/seed/vale-almoco-comedia/300/450',
+                img: 'images/capa2.jpg',
                 categoria: 'Comédia',
                 ano: '2025',
                 sinopse: 'A confusão começa quando funcionários de uma empresa decidem fazer um almoço que sai totalmente do controle. Uma comédia cheia de situações inusitadas e personagens excêntricos.',
@@ -319,7 +319,7 @@
             },
             'virou-bagunca': {
                 titulo: 'Virou Bagunça',
-                img: 'https://raw.githubusercontent.com/nohanmoraisss/minha-repo/refs/heads/main/virou.png',
+                img: 'images/virou.png',
                 categoria: 'Comédia',
                 ano: '2025',
                 sinopse: 'Quando um evento simples vira o caos, um grupo de amigos precisa se unir para consertar a bagunça antes que seja tarde demais. Muitas risadas e confusões garantidas!',
@@ -327,7 +327,7 @@
             },
             'terra-baguncada': {
                 titulo: 'O dia que a terra ficou bagunçada',
-                img: 'https://picsum.photos/seed/terra-baguncada/300/450',
+                img: 'images/capa3.jpg',
                 categoria: 'Comédia',
                 ano: '2025',
                 sinopse: 'Uma comédia sci-fi onde um evento alienígena inesperado transforma a Terra em um verdadeiro caos cômico. A humanidade nunca riu tanto em meio ao desespero.',
