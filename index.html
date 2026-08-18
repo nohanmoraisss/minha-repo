@@ -2,7 +2,13 @@
 <html lang="pt-br">
 <head>
     <style>
-        @import url(./fonts/copperplategothicbold.ttf);
+        @font-face {
+            font-family: 'Copperplate';
+            src: url('fonts/copperplategothicbold.ttf') format('truetype');
+            font-weight: bold;
+            font-style: normal;
+            font-display: swap;
+        }
     body {
         background-image: url(images/bg.jpg);
         background-size: cover;
@@ -17,9 +23,10 @@
         padding: 20px; 
         background-color: #F5D03D;
         color: rgb(176, 77, 11);
-        max-width: 800px;
+        max-width: 1200px;
         margin: 0 auto;
         border-style: outset; border-color: rgb(159, 104, 0); border-radius: 25px;
+        box-sizing: border-box;
     }
     
     footer {
@@ -117,15 +124,12 @@
     }
 
     .titulo {
-        color: #ffffff;
-        font-family: copperplate;
-        src: url(fonts/copperplategothicbold.ttf) format(tff);
-        font-weight: normal;
-        font-style: normal;
-        font-display: swap;
-        font-size: 40px;
-        text-decoration: none;
+        color: #000000;
+        font-family: 'Copperplate', 'Copperplate Gothic Bold', 'Trebuchet MS', Arial, sans-serif;
         font-weight: bold;
+        font-size: 56px;
+        letter-spacing: 3px;
+        text-decoration: none;
     }
 
     .modal-filme {
@@ -278,7 +282,7 @@
                     </div>
 
                     <div class="filme-card" onclick="abrirFilme('terra-baguncada')">
-                        <img src="images/capa2.jpg" alt="bagunça"
+                        <img src="images/capa2.jpg" alt="bagunça">
                         <h2>O dia que a terra ficou bagunçada</h2>
                         <p>Categoria: Comédia</p>
                         <p>Ano: 2025</p>
